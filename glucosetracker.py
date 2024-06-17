@@ -128,11 +128,15 @@ def statistics():
     mean_value = np.mean(all_readings)
     median_value = np.median(all_readings)
     mode_value = Counter(all_readings).most_common(1)[0][0]
+    std_dev = np.std(all_readings)
+    variance = np.var(all_readings)
 
     print("Statistics")
     print(f"Mean: {mean_value:.2f}")
     print(f"Median: {median_value:.2f}")
     print(f"Mode: {mode_value:.2f}")
+    print(f"Standard Deviation: {std_dev:.2f}")
+    print(f"Variance: {variance:.2f}")
     print(f"Total Hypoglycemic Events: {low_blood_sugar_event}")
     print(f"Total Hyperglycemic Events: {high_blood_sugar_event}")
 
